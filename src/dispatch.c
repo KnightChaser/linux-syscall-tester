@@ -15,8 +15,8 @@ typedef struct {
 
 // Table of syscall names and their corresponding invoke functions
 // Expand this if more syscalls are added! >_<
-static const syscall_entry table[] = {{"open", invoke_open_syscall},
-                                      /* { "unlink", invoke_unlink_syscall }, */
+static const syscall_entry table[] = {{"close", invoke_close_syscall},
+                                      {"open", invoke_open_syscall},
                                       {NULL, NULL}};
 
 /**
