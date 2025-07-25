@@ -24,33 +24,22 @@ static void usage(const char *prog) {
 int main(int argc, char **argv) {
     int c;
     char *syscall_name = NULL;
-
     struct option longopts[] = {{"syscall", required_argument, NULL, 's'},
                                 {NULL, 0, NULL, 0}};
 
+    // Parse command line options
     while ((c = getopt_long(argc, argv, "s:", longopts, NULL)) != -1) {
-        switch (c) {
-        case 's':
+        if (c == 's')
             syscall_name = optarg;
-            break;
-        default:
+        else
             usage(argv[0]);
-        }
     }
-
     if (!syscall_name)
         usage(argv[0]);
 
+    // Dispatch to the appropriate syscall function based on the name
     if (strcmp(syscall_name, "open") == 0) {
-        const char *path = "testfile.txt";
-        int fd = invoke_open_syscall(path, O_CREAT | O_WRONLY, 0644);
-        if (fd < 0) {
-            perror("open syscall failed");
-            return EXIT_FAILURE;
-        }
-        printf("✅ opened '%s' → fd %d\n", path, fd);
-        close(fd);
-
+        invoke_open_syscall();
     } else {
         fprintf(stderr, "Error: unsupported syscall '%s'\n", syscall_name);
         return EXIT_FAILURE;
