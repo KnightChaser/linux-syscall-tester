@@ -2,7 +2,6 @@
 #include "dispatch.h"
 #include "syscalls/invoke_syscalls.h"
 #include "utils/logger.h"
-#include <stdio.h>
 #include <string.h>
 
 // signature for all invoke_*.c modules
@@ -16,6 +15,7 @@ typedef struct {
 // Table of syscall names and their corresponding invoke functions
 // Expand this if more syscalls are added! >_<
 static const syscall_entry table[] = {{"close", invoke_close_syscall},
+                                      {"dup", invoke_dup_syscall},
                                       {"open", invoke_open_syscall},
                                       {NULL, NULL}};
 
