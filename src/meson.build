@@ -5,6 +5,7 @@ dispatch_sources = files('./dispatch.c')
 syscall_sources = files(
   'syscalls/invoke_close.c',
   'syscalls/invoke_dup.c',
+  'syscalls/invoke_fcntl.c',
   'syscalls/invoke_open.c',
 )
 

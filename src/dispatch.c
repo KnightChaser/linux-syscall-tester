@@ -16,6 +16,7 @@ typedef struct {
 // Expand this if more syscalls are added! >_<
 static const syscall_entry table[] = {{"close", invoke_close_syscall},
                                       {"dup", invoke_dup_syscall},
+                                      {"fcntl", invoke_fcntl_syscall},
                                       {"open", invoke_open_syscall},
                                       {NULL, NULL}};
 
