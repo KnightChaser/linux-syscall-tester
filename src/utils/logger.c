@@ -1,6 +1,7 @@
 // src/utils/logger.c
 #define _GNU_SOURCE
 #include "logger.h"
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,6 +11,7 @@
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
 #define RED "\033[31m"
+#define BLUE "\033[34m"
 
 void log_request(const char *name) {
     printf("[+] Request to execute syscall \"%s\" delivered.\n", name);
@@ -17,6 +19,15 @@ void log_request(const char *name) {
 
 void log_step(const char *step) {
     printf(YELLOW "[~] Executing %s (En route)\n" RESET, step);
+}
+
+void log_info(const char *name, const char *fmt, ...) {
+    va_list ap;
+    va_start(ap, fmt);
+    printf(BLUE "[*] Syscall \"%s\": " RESET, name);
+    vprintf(fmt, ap);
+    printf("\n");
+    va_end(ap);
 }
 
 void log_success(const char *name) {
