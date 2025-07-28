@@ -6,3 +6,4 @@ void invoke_close_syscall(void);
 void invoke_dup_syscall(void);
 void invoke_fcntl_syscall(void);
 void invoke_open_syscall(void);
+void invoke_read_syscall(void);
