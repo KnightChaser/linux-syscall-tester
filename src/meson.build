@@ -9,6 +9,7 @@ syscall_sources = files(
   'syscalls/invoke_open.c',
   'syscalls/invoke_pread64.c',
   'syscalls/invoke_read.c',
+  'syscalls/invoke_readv.c',
 )
 
 exe = executable(
