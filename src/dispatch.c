@@ -18,7 +18,7 @@ static const syscall_entry table[] = {{"close", invoke_close_syscall},
                                       {"dup", invoke_dup_syscall},
                                       {"fcntl", invoke_fcntl_syscall},
                                       {"open", invoke_open_syscall},
-                                      {"pread", invoke_pread_syscall},
+                                      {"pread64", invoke_pread64_syscall},
                                       {"read", invoke_read_syscall},
                                       {NULL, NULL}};
 

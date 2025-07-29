@@ -1,4 +1,4 @@
-// src/syscalls/invoke_pread.c
+// src/syscalls/invoke_pread64.c
 #define _GNU_SOURCE
 #include "../utils/logger.h"
 #include "invoke_syscalls.h"
@@ -11,8 +11,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-void invoke_pread_syscall(void) {
-    const char *name = "pread";
+void invoke_pread64_syscall(void) {
+    const char *name = "pread64";
     char path[PATH_MAX];
     const char *home = getenv("HOME");
     if (!home) {
