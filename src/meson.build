@@ -8,6 +8,7 @@ syscall_sources = files(
   'syscalls/invoke_fcntl.c',
   'syscalls/invoke_open.c',
   'syscalls/invoke_pread64.c',
+  'syscalls/invoke_preadv.c',
   'syscalls/invoke_read.c',
   'syscalls/invoke_readv.c',
 )
