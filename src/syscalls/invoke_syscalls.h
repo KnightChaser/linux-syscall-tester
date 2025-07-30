@@ -10,3 +10,4 @@ void invoke_pread64_syscall(void);
 void invoke_preadv_syscall(void);
 void invoke_read_syscall(void);
 void invoke_readv_syscall(void);
+void invoke_write_syscall(void);
