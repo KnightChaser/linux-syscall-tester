@@ -13,6 +13,7 @@ syscall_sources = files(
   'syscalls/invoke_read.c',
   'syscalls/invoke_readv.c',
   'syscalls/invoke_write.c',
+  'syscalls/invoke_writev.c',
 )
 
 exe = executable(
