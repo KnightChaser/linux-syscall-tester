@@ -9,6 +9,7 @@ void invoke_open_syscall(void);
 void invoke_pread64_syscall(void);
 void invoke_preadv_syscall(void);
 void invoke_pwrite64_syscall(void);
+void invoke_pwritev_syscall(void);
 void invoke_read_syscall(void);
 void invoke_readv_syscall(void);
 void invoke_write_syscall(void);
