@@ -6,6 +6,7 @@ syscall_sources = files(
   'syscalls/invoke_close.c',
   'syscalls/invoke_dup.c',
   'syscalls/invoke_fcntl.c',
+  'syscalls/invoke_mkdir.c',
   'syscalls/invoke_open.c',
   'syscalls/invoke_pread64.c',
   'syscalls/invoke_preadv.c',
