@@ -6,6 +6,7 @@ void invoke_close_syscall(void);
 void invoke_dup_syscall(void);
 void invoke_fcntl_syscall(void);
 void invoke_link_syscall(void);
+void invoke_linkat_syscall(void);
 void invoke_mkdir_syscall(void);
 void invoke_mkdirat_syscall(void);
 void invoke_open_syscall(void);
