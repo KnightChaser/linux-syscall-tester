@@ -17,5 +17,6 @@ void invoke_pwritev_syscall(void);
 void invoke_read_syscall(void);
 void invoke_readv_syscall(void);
 void invoke_rmdir_syscall(void);
+void invoke_unlink_syscall(void);
 void invoke_write_syscall(void);
 void invoke_writev_syscall(void);

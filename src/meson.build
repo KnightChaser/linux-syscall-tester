@@ -18,6 +18,7 @@ syscall_sources = files(
   'syscalls/invoke_read.c',
   'syscalls/invoke_readv.c',
   'syscalls/invoke_rmdir.c',
+  'syscalls/invoke_unlink.c',
   'syscalls/invoke_write.c',
   'syscalls/invoke_writev.c',
 )
